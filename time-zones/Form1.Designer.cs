@@ -30,6 +30,7 @@ namespace time_zones
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelPortugal = new System.Windows.Forms.Label();
             this.labelIndia = new System.Windows.Forms.Label();
             this.labelPrimeiro = new System.Windows.Forms.Label();
@@ -271,6 +272,8 @@ namespace time_zones
             this.Controls.Add(this.labelPrimeiro);
             this.Controls.Add(this.labelIndia);
             this.Controls.Add(this.labelPortugal);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(280, 256);
             this.MinimumSize = new System.Drawing.Size(280, 256);
             this.Name = "Form1";
