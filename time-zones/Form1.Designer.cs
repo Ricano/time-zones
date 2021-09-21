@@ -29,6 +29,7 @@ namespace time_zones
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelPortugal = new System.Windows.Forms.Label();
             this.labelIndia = new System.Windows.Forms.Label();
             this.labelPrimeiro = new System.Windows.Forms.Label();
@@ -44,7 +45,8 @@ namespace time_zones
             this.numericUpDownPrimeiro = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownSegundo = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownTerceiro = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button = new System.Windows.Forms.Label();
+            this.relogio = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrimeiro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSegundo)).BeginInit();
@@ -75,7 +77,7 @@ namespace time_zones
             // 
             this.labelPrimeiro.AutoSize = true;
             this.labelPrimeiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrimeiro.Location = new System.Drawing.Point(1, 100);
+            this.labelPrimeiro.Location = new System.Drawing.Point(7, 100);
             this.labelPrimeiro.Name = "labelPrimeiro";
             this.labelPrimeiro.Size = new System.Drawing.Size(102, 20);
             this.labelPrimeiro.TabIndex = 2;
@@ -85,7 +87,7 @@ namespace time_zones
             // 
             this.labelSegundo.AutoSize = true;
             this.labelSegundo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSegundo.Location = new System.Drawing.Point(1, 140);
+            this.labelSegundo.Location = new System.Drawing.Point(7, 140);
             this.labelSegundo.Name = "labelSegundo";
             this.labelSegundo.Size = new System.Drawing.Size(102, 20);
             this.labelSegundo.TabIndex = 3;
@@ -95,7 +97,7 @@ namespace time_zones
             // 
             this.labelTerceiro.AutoSize = true;
             this.labelTerceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTerceiro.Location = new System.Drawing.Point(1, 180);
+            this.labelTerceiro.Location = new System.Drawing.Point(7, 180);
             this.labelTerceiro.Name = "labelTerceiro";
             this.labelTerceiro.Size = new System.Drawing.Size(102, 20);
             this.labelTerceiro.TabIndex = 4;
@@ -229,25 +231,31 @@ namespace time_zones
             this.numericUpDownTerceiro.Size = new System.Drawing.Size(53, 20);
             this.numericUpDownTerceiro.TabIndex = 14;
             // 
-            // label1
+            // button
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(217, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = ">>";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.button.AutoSize = true;
+            this.button.BackColor = System.Drawing.Color.Black;
+            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button.ForeColor = System.Drawing.Color.Yellow;
+            this.button.Location = new System.Drawing.Point(217, 95);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(38, 25);
+            this.button.TabIndex = 15;
+            this.button.Text = ">>";
+            this.button.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // relogio
+            // 
+            this.relogio.Enabled = true;
+            this.relogio.Interval = 1000;
+            this.relogio.Tick += new System.EventHandler(this.relogio_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 217);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.numericUpDownTerceiro);
             this.Controls.Add(this.numericUpDownSegundo);
             this.Controls.Add(this.numericUpDownPrimeiro);
@@ -293,7 +301,8 @@ namespace time_zones
         private System.Windows.Forms.NumericUpDown numericUpDownPrimeiro;
         private System.Windows.Forms.NumericUpDown numericUpDownSegundo;
         private System.Windows.Forms.NumericUpDown numericUpDownTerceiro;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label button;
+        private System.Windows.Forms.Timer relogio;
     }
 }
 
