@@ -235,17 +235,18 @@ namespace time_zones
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(222, 95);
+            this.label1.Location = new System.Drawing.Point(217, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 25);
             this.label1.TabIndex = 15;
             this.label1.Text = ">>";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 217);
+            this.ClientSize = new System.Drawing.Size(264, 217);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDownTerceiro);
             this.Controls.Add(this.numericUpDownSegundo);
@@ -262,6 +263,8 @@ namespace time_zones
             this.Controls.Add(this.labelPrimeiro);
             this.Controls.Add(this.labelIndia);
             this.Controls.Add(this.labelPortugal);
+            this.MaximumSize = new System.Drawing.Size(280, 256);
+            this.MinimumSize = new System.Drawing.Size(280, 256);
             this.Name = "Form1";
             this.Text = "Time-Zones";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMain)).EndInit();

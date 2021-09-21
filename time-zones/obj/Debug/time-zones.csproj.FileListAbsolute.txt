@@ -1,0 +1,10 @@
+C:\Users\Ricardo\source\repos\time-zones\time-zones\bin\Debug\time-zones.exe.config
+C:\Users\Ricardo\source\repos\time-zones\time-zones\bin\Debug\time-zones.exe
+C:\Users\Ricardo\source\repos\time-zones\time-zones\bin\Debug\time-zones.pdb
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time-zones.csproj.AssemblyReference.cache
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time_zones.Form1.resources
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time_zones.Properties.Resources.resources
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time-zones.csproj.GenerateResource.cache
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time-zones.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time-zones.exe
+C:\Users\Ricardo\source\repos\time-zones\time-zones\obj\Debug\time-zones.pdb
