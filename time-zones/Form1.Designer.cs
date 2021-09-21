@@ -39,6 +39,16 @@ namespace time_zones
             this.primeiro = new System.Windows.Forms.Label();
             this.segundo = new System.Windows.Forms.Label();
             this.terceiro = new System.Windows.Forms.Label();
+            this.labelDiferenca = new System.Windows.Forms.Label();
+            this.numericUpDownMain = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPrimeiro = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSegundo = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTerceiro = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrimeiro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSegundo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTerceiro)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPortugal
@@ -95,7 +105,7 @@ namespace time_zones
             // 
             this.portugal.AutoSize = true;
             this.portugal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.portugal.Location = new System.Drawing.Point(134, 9);
+            this.portugal.Location = new System.Drawing.Point(122, 10);
             this.portugal.Name = "portugal";
             this.portugal.Size = new System.Drawing.Size(80, 24);
             this.portugal.TabIndex = 5;
@@ -105,7 +115,7 @@ namespace time_zones
             // 
             this.india.AutoSize = true;
             this.india.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.india.Location = new System.Drawing.Point(134, 50);
+            this.india.Location = new System.Drawing.Point(122, 51);
             this.india.Name = "india";
             this.india.Size = new System.Drawing.Size(55, 24);
             this.india.TabIndex = 6;
@@ -115,7 +125,7 @@ namespace time_zones
             // 
             this.primeiro.AutoSize = true;
             this.primeiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.primeiro.Location = new System.Drawing.Point(134, 96);
+            this.primeiro.Location = new System.Drawing.Point(122, 97);
             this.primeiro.Name = "primeiro";
             this.primeiro.Size = new System.Drawing.Size(55, 24);
             this.primeiro.TabIndex = 7;
@@ -125,7 +135,7 @@ namespace time_zones
             // 
             this.segundo.AutoSize = true;
             this.segundo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.segundo.Location = new System.Drawing.Point(134, 136);
+            this.segundo.Location = new System.Drawing.Point(122, 137);
             this.segundo.Name = "segundo";
             this.segundo.Size = new System.Drawing.Size(55, 24);
             this.segundo.TabIndex = 8;
@@ -135,17 +145,113 @@ namespace time_zones
             // 
             this.terceiro.AutoSize = true;
             this.terceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.terceiro.Location = new System.Drawing.Point(134, 176);
+            this.terceiro.Location = new System.Drawing.Point(122, 177);
             this.terceiro.Name = "terceiro";
             this.terceiro.Size = new System.Drawing.Size(55, 24);
             this.terceiro.TabIndex = 9;
             this.terceiro.Text = "00:00";
             // 
+            // labelDiferenca
+            // 
+            this.labelDiferenca.AutoSize = true;
+            this.labelDiferenca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiferenca.Location = new System.Drawing.Point(302, 10);
+            this.labelDiferenca.Name = "labelDiferenca";
+            this.labelDiferenca.Size = new System.Drawing.Size(134, 20);
+            this.labelDiferenca.TabIndex = 10;
+            this.labelDiferenca.Text = "Diferença Horária";
+            // 
+            // numericUpDownMain
+            // 
+            this.numericUpDownMain.Location = new System.Drawing.Point(306, 51);
+            this.numericUpDownMain.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numericUpDownMain.Minimum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownMain.Name = "numericUpDownMain";
+            this.numericUpDownMain.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownMain.TabIndex = 11;
+            // 
+            // numericUpDownPrimeiro
+            // 
+            this.numericUpDownPrimeiro.Location = new System.Drawing.Point(306, 97);
+            this.numericUpDownPrimeiro.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numericUpDownPrimeiro.Minimum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownPrimeiro.Name = "numericUpDownPrimeiro";
+            this.numericUpDownPrimeiro.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownPrimeiro.TabIndex = 12;
+            // 
+            // numericUpDownSegundo
+            // 
+            this.numericUpDownSegundo.Location = new System.Drawing.Point(306, 137);
+            this.numericUpDownSegundo.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numericUpDownSegundo.Minimum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownSegundo.Name = "numericUpDownSegundo";
+            this.numericUpDownSegundo.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownSegundo.TabIndex = 13;
+            // 
+            // numericUpDownTerceiro
+            // 
+            this.numericUpDownTerceiro.Location = new System.Drawing.Point(306, 177);
+            this.numericUpDownTerceiro.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numericUpDownTerceiro.Minimum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownTerceiro.Name = "numericUpDownTerceiro";
+            this.numericUpDownTerceiro.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDownTerceiro.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(222, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = ">>";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(459, 217);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDownTerceiro);
+            this.Controls.Add(this.numericUpDownSegundo);
+            this.Controls.Add(this.numericUpDownPrimeiro);
+            this.Controls.Add(this.numericUpDownMain);
+            this.Controls.Add(this.labelDiferenca);
             this.Controls.Add(this.terceiro);
             this.Controls.Add(this.segundo);
             this.Controls.Add(this.primeiro);
@@ -157,7 +263,11 @@ namespace time_zones
             this.Controls.Add(this.labelIndia);
             this.Controls.Add(this.labelPortugal);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Time-Zones";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrimeiro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSegundo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTerceiro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,6 +285,12 @@ namespace time_zones
         private System.Windows.Forms.Label primeiro;
         private System.Windows.Forms.Label segundo;
         private System.Windows.Forms.Label terceiro;
+        private System.Windows.Forms.Label labelDiferenca;
+        private System.Windows.Forms.NumericUpDown numericUpDownMain;
+        private System.Windows.Forms.NumericUpDown numericUpDownPrimeiro;
+        private System.Windows.Forms.NumericUpDown numericUpDownSegundo;
+        private System.Windows.Forms.NumericUpDown numericUpDownTerceiro;
+        private System.Windows.Forms.Label label1;
     }
 }
 
